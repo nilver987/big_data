@@ -1,4 +1,4 @@
-# 🌧️ Precipitación — Integrante B
+# 🌧️ Precipitación — NAYDER
 
 <div class="dim-card blue" markdown>
 <div class="dim-card-header"><span>U1 · Batch — Predictiva sin tiempo real</span><span class="integrante">Integrante B</span></div>
