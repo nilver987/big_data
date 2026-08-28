@@ -1,4 +1,4 @@
-# ❄️ Heladas — Integrante A
+# ❄️ Heladas — NILVER
 
 <div class="dim-card amber" markdown>
 <div class="dim-card-header"><span>U1 · Batch — Predictiva sin tiempo real</span><span class="integrante">Integrante A</span></div>
