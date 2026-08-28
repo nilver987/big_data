@@ -13,5 +13,5 @@
 
 ## Detalle por dimensión
 
-- **[❄️ Heladas](heladas.md)** — Integrante A · U1 batch + U2 streaming
-- **[🌧️ Precipitación](precipitacion.md)** — Integrante B · U1 batch + U2 streaming
+- **[❄️ Heladas](heladas.md)** — Nilver · U1 batch + U2 streaming
+- **[🌧️ Precipitación](precipitacion.md)** — Nayder · U1 batch + U2 streaming
