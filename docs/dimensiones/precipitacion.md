@@ -1,7 +1,7 @@
 # 🌧️ Precipitación — NAYDER
 
 <div class="dim-card blue" markdown>
-<div class="dim-card-header"><span>U1 · Batch — Predictiva sin tiempo real</span><span class="integrante">Integrante B</span></div>
+<div class="dim-card-header"><span>U1 · Batch — Predictiva sin tiempo real</span><span class="integrante">NAYDER</span></div>
 
 <p class="dim-question">¿Cuál fue la precipitación acumulada por mes en Juliaca en los últimos 5 años, y qué acumulado se puede esperar el próximo mes según la tendencia histórica?</p>
 
