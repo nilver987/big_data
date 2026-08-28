@@ -43,4 +43,4 @@ El proyecto necesita dos vistas complementarias sobre el mismo origen de datos:
 
 ## ¿Continúa un proyecto anterior o es un dominio nuevo?
 
-Es una evolución del proyecto anterior del equipo: se mantiene el enfoque en monitoreo climático, pero se rediseñó el dominio de datos y la arquitectura (de Kappa con sensores propios, a Lambda con fuentes abiertas Open-Meteo).
+Es un proyecto nuevo del equipo: el enfoque es monitoreo climático, pero se rediseñó el dominio de datos y la arquitectura (de Kappa , a Lambda con fuentes abiertas Open-Meteo).
