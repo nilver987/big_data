@@ -60,3 +60,6 @@ nav:
       - "❄️ Heladas": dimensiones/heladas.md
       - "🌧️ Precipitación": dimensiones/precipitacion.md
   - Alcance del proyecto: alcance.md
+  - Resultados técnicos:
+      - "❄️ Heladas": resultados/heladas/01_heladas_nilver.md
+      - "🌧️ Precipitación": resultados/precipitacion/02_precipitacion_nayder.md
