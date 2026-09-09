@@ -1,7 +1,7 @@
-# ❄️ Heladas — Integrante A
+# ❄️ Heladas — NILVER
 
 <div class="dim-card amber" markdown>
-<div class="dim-card-header"><span>U1 · Batch — Predictiva sin tiempo real</span><span class="integrante">Integrante A</span></div>
+<div class="dim-card-header"><span>U1 · Batch — Predictiva sin tiempo real</span><span class="integrante">NILVER</span></div>
 
 <p class="dim-question">¿Cuál fue la temperatura mínima registrada por mes en Juliaca en los últimos 5 años, y qué temperatura mínima se puede esperar el próximo mes? Responde directamente a la pregunta central: las heladas son el riesgo agrícola más frecuente de la zona.</p>
 
