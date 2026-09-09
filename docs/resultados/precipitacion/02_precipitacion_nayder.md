@@ -192,6 +192,21 @@ print(f"Total dias: {df_diario.count():,}")
     Total dias: 6,095
 
 
+## 1.5.1 Procesamiento con RDD (evidencia de bajo nivel)
+
+
+```python
+conteo_rdd = df_diario.rdd.filter(lambda fila: fila["hay_lluvia_intensa"] == 1.0).count()
+print(f"Dias con lluvia intensa (via RDD): {conteo_rdd:,}")
+```
+
+    [Stage 577:>                                                        (0 + 1) / 1]
+
+    Dias con lluvia intensa (via RDD): 2,164
+
+
+                                                                                    
+
 ## 1.6 Resumen mensual y gráfico de tendencia
 
 
@@ -220,7 +235,7 @@ plt.show()
 
 
     
-![png](output_12_0.png)
+![png](output_14_0.png)
     
 
 
@@ -416,7 +431,7 @@ plt.show()
 
 
     
-![png](output_24_0.png)
+![png](output_26_0.png)
     
 
 
@@ -445,7 +460,7 @@ plt.show()
 
 
     
-![png](output_26_0.png)
+![png](output_28_0.png)
     
 
 
@@ -477,7 +492,7 @@ plt.show()
 
 
     
-![png](output_29_0.png)
+![png](output_31_0.png)
     
 
 
@@ -509,7 +524,7 @@ plt.show()
 
 
     
-![png](output_31_0.png)
+![png](output_33_0.png)
     
 
 
@@ -599,6 +614,26 @@ print(f"Config B (dia + humedad + nubosidad + presion) -> AUC: {auc_enriquecido:
     Config B (dia + humedad + nubosidad + presion) -> AUC: 0.9425, F1: 0.8737
 
 
+## 1.18.1 Métricas adicionales: precisión y exhaustividad
+
+
+```python
+evaluador_precision = MulticlassClassificationEvaluator(labelCol="hay_lluvia_intensa", predictionCol="prediction", metricName="weightedPrecision")
+evaluador_recall = MulticlassClassificationEvaluator(labelCol="hay_lluvia_intensa", predictionCol="prediction", metricName="weightedRecall")
+
+precision_b = evaluador_precision.evaluate(predicciones_log_enriquecido)
+recall_b = evaluador_recall.evaluate(predicciones_log_enriquecido)
+
+print(f"Config B -> Precision: {precision_b:.4f}, Recall: {recall_b:.4f}")
+```
+
+                                                                                    
+
+    Config B -> Precision: 0.8745, Recall: 0.8732
+
+
+                                                                                    
+
 ## 1.19 Matriz de confusión - Config B
 
 
@@ -633,7 +668,7 @@ plt.show()
 
 
     
-![png](output_39_1.png)
+![png](output_43_1.png)
     
 
 
@@ -669,7 +704,7 @@ plt.show()
 
 
     
-![png](output_41_0.png)
+![png](output_45_0.png)
     
 
 

@@ -243,6 +243,21 @@ print(f"Total dias: {df_diario.count():,}")
     Total dias: 6,095
 
 
+## 1.5a Procesamiento con RDD (evidencia de bajo nivel)
+
+
+```python
+conteo_rdd = df_diario.rdd.filter(lambda fila: fila["hay_helada"] == 1.0).count()
+print(f"Dias con helada (via RDD): {conteo_rdd:,}")
+```
+
+    [Stage 809:>                                                        (0 + 1) / 1]
+
+    Dias con helada (via RDD): 1,583
+
+
+                                                                                    
+
 ## 3.2 Evidencia del plan de ejecución (lazy evaluation)
 
 
@@ -475,7 +490,7 @@ plt.show()
 
 
     
-![png](output_26_1.png)
+![png](output_28_1.png)
     
 
 
@@ -504,7 +519,7 @@ plt.show()
 
 
     
-![png](output_28_0.png)
+![png](output_30_0.png)
     
 
 
@@ -531,7 +546,7 @@ plt.show()
 
 
     
-![png](output_30_0.png)
+![png](output_32_0.png)
     
 
 
@@ -563,7 +578,7 @@ plt.show()
 
 
     
-![png](output_32_0.png)
+![png](output_34_0.png)
     
 
 
@@ -656,6 +671,26 @@ print(f"Config B (dia + humedad + nubosidad + presion) -> AUC: {auc_enriquecido:
 
                                                                                     
 
+## 7.1 Métricas adicionales: precisión y exhaustividad
+
+
+```python
+evaluador_precision = MulticlassClassificationEvaluator(labelCol="hay_helada", predictionCol="prediction", metricName="weightedPrecision")
+evaluador_recall = MulticlassClassificationEvaluator(labelCol="hay_helada", predictionCol="prediction", metricName="weightedRecall")
+
+precision_b = evaluador_precision.evaluate(predicciones_log_enriquecido)
+recall_b = evaluador_recall.evaluate(predicciones_log_enriquecido)
+
+print(f"Config B -> Precision: {precision_b:.4f}, Recall: {recall_b:.4f}")
+```
+
+                                                                                    
+
+    Config B -> Precision: 0.9108, Recall: 0.9111
+
+
+                                                                                    
+
 ## 8.1 Interpretar el modelo ganador: importancia de cada variable
 
 
@@ -677,7 +712,7 @@ plt.show()
 
 
     
-![png](output_40_0.png)
+![png](output_44_0.png)
     
 
 
@@ -733,7 +768,7 @@ plt.show()
 
 
     
-![png](output_43_1.png)
+![png](output_47_1.png)
     
 
 
@@ -766,7 +801,7 @@ plt.show()
 
 
     
-![png](output_45_1.png)
+![png](output_49_1.png)
     
 
 
@@ -804,7 +839,7 @@ plt.show()
 
 
     
-![png](output_47_1.png)
+![png](output_51_1.png)
     
 
 
