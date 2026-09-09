@@ -29,13 +29,13 @@ El proyecto necesita dos vistas complementarias sobre el mismo origen de datos:
 - **(b) Vista en tiempo casi real** — un modelo de series de tiempo se actualiza dato por dato conforme llega el pronóstico.
 
 !!! note "¿Por qué no Kappa?"
-    Kappa no se justifica porque el reprocesamiento de 5 años de histórico horario (~43,800 registros) es más eficiente como batch por lotes que como replay de un log de eventos único, y porque el curso pide explícitamente ambas capas (U1 batch + U2 streaming) tratadas de forma distinta.
+    Kappa no se justifica porque el reprocesamiento de 16 años de histórico horario (~146,000 registros) es más eficiente como batch por lotes que como replay de un log de eventos único, y porque el curso pide explícitamente ambas capas (U1 batch + U2 streaming) tratadas de forma distinta.
 
 ## Fuentes de datos
 
 === "Batch"
 
-    **Open-Meteo Historical Weather API** (`archive-api.open-meteo.com`) — datos abiertos, sin autenticación. Coordenadas de Juliaca (-15.4997, -70.1339), últimos 5 años, variables horarias `temperature_2m` y `precipitation`/`rain`, con sus resúmenes diarios.
+    **Open-Meteo Historical Weather API** (`archive-api.open-meteo.com`) — datos abiertos, sin autenticación. Coordenadas de Juliaca (-15.50082, -70.13980), 2010-2026 (16 años, ~146,000 registros horarios), variables horarias `temperature_2m`, `precipitation`, `relative_humidity_2m`, `cloud_cover`, `wind_speed_10m` y `surface_pressure`.
 
 === "Streaming"
 

@@ -3,25 +3,27 @@
 <div class="dim-card amber" markdown>
 <div class="dim-card-header"><span>U1 · Batch — Predictiva sin tiempo real</span><span class="integrante">NILVER</span></div>
 
-<p class="dim-question">¿Cuál fue la temperatura mínima registrada por mes en Juliaca en los últimos 5 años, y qué temperatura mínima se puede esperar el próximo mes? Responde directamente a la pregunta central: las heladas son el riesgo agrícola más frecuente de la zona.</p>
+<p class="dim-question">¿En qué meses del año hay más de 30% de probabilidad histórica de un día con helada (mínima < 0°C) en Juliaca, y qué tan bien se puede predecir ese riesgo a partir de la estacionalidad y el contexto meteorológico del día (humedad, nubosidad, presión)? Responde directamente a la pregunta central: las heladas son el riesgo agrícola más frecuente de la zona.</p>
 
 <div class="dim-body" markdown>
 
 | Campo | Detalle |
 |---|---|
-| **Indicador(es)** | Temperatura mínima mensual (°C); temperatura mínima proyectada del próximo mes mediante un modelo de regresión. |
-| **Decisión que habilita** | El agricultor decide si cubrir sus cultivos sensibles a heladas según el mes de mayor riesgo proyectado. |
-| **Fuente batch** | Open-Meteo Historical API — campo `temperature_2m` (horario), agregado a mínimo mensual con PySpark (`groupBy(mes).agg(min("temperature_2m"))`). Esquema clave: fecha, temperature_2m. |
+| **Indicador(es)** | Probabilidad diaria de helada (`hay_helada`, 0/1, mínima < 0°C — umbral validado con 16 años de datos reales: mayo-agosto superan 40-84% de días con helada); probabilidad mensual histórica y clasificación predicha por el modelo para un día dado. |
+| **Decisión que habilita** | El agricultor decide si cubrir sus cultivos sensibles a heladas según el mes de mayor riesgo y la probabilidad diaria estimada. |
+| **Fuente batch** | Open-Meteo Historical API — 16 años (2010-2026, ~146,000 registros horarios), agregados a nivel diario con PySpark: mínima diaria de `temperature_2m`, promedio diario de `relative_humidity_2m`, `cloud_cover` y `surface_pressure`. Salida persistida como capa Gold en Parquet, particionada por año. |
 | **Fuente streaming** | Mismo origen que U2 (tópico Kafka `clima-juliaca`), acumulado aquí para reentrenamiento periódico — no se procesa en vivo en esta dimensión. |
-| **Modelo predictivo** | Regresión lineal (`pyspark.ml.regression.LinearRegression` o scikit-learn) sobre la serie mensual de mínimas, entrenada una sola vez por corrida del pipeline batch. |
-| **Salida** | Notebook Jupyter/PySpark — tabla de mínimas por mes, gráfico de tendencia y valor proyectado del próximo mes, incluyendo el error del modelo (MAE) sobre un conjunto de validación. |
+| **Modelo predictivo** | Clasificación binaria (`pyspark.ml.classification.LogisticRegression`, `hay_helada` como target 0/1) sobre el día del año codificado de forma cíclica (`seno`/`coseno`). Se comparan dos configuraciones: (A) solo estacionalidad, (B) estacionalidad + humedad/nubosidad/presión promedio del día — confirmado con datos reales que humedad y nubosidad sí distinguen días con y sin helada, viento no. |
+| **Salida** | Notebook PySpark (`01_heladas_nilver.ipynb`) — gráfico de probabilidad de helada por mes con línea de umbral 30%, boxplot de temperatura mínima por mes, matriz de correlación de variables, matrices de confusión, y modelo ganador guardado, evaluado con AUC y F1 sobre un conjunto de prueba (20%). |
 | **Se combina con** | La dimensión de precipitación (B) en un mismo tablero final de "riesgo climático de Juliaca". |
+
+**Resultado obtenido (Config B, ganadora):** AUC 0.961, F1 0.906 — mejora clara sobre la Config A (solo estacionalidad: AUC 0.913, F1 0.857), confirmando que el contexto meteorológico aporta valor real más allá de la fecha.
 
 **Requisitos mínimos**
 
-1. El sistema debe calcular la temperatura mínima mensual a partir del histórico horario de Open-Meteo.
-2. El sistema debe entrenar y evaluar un modelo de regresión que proyecte la temperatura mínima del siguiente mes.
-3. El sistema debe documentar el error del modelo (MAE/RMSE) sobre un conjunto de validación.
+1. El sistema debe calcular la probabilidad diaria y mensual de helada a partir del histórico horario de Open-Meteo, con un umbral validado contra los datos reales (no supuesto).
+2. El sistema debe entrenar y evaluar un modelo de clasificación que compare al menos dos configuraciones de predictores, reportando AUC y F1 sobre un conjunto de prueba independiente.
+3. El sistema debe documentar y guardar el modelo ganador de la comparación, con evidencia de `explain()` (lazy evaluation) y de la escritura/lectura particionada en Parquet.
 
 </div>
 </div>

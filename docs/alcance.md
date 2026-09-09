@@ -4,7 +4,7 @@
 <div class="scope-card yes" markdown>
 ### ✓ Sí cubre
 
-Tendencia histórica mensual con modelo predictivo batch (regresión lineal) y proyección de corto plazo con modelo de series de tiempo corriendo en vivo sobre Spark Structured Streaming, para dos riesgos climáticos clave de Juliaca —heladas y lluvia intensa—, integrados en un único tablero de Grafana con alertas.
+Probabilidad histórica mensual de riesgo climático con modelo predictivo batch de clasificación (regresión logística, estacionalidad + contexto meteorológico) y proyección de corto plazo con modelo de series de tiempo corriendo en vivo sobre Spark Structured Streaming, para dos riesgos climáticos clave de Juliaca —heladas y lluvia intensa—, integrados en un único tablero de Grafana con alertas.
 </div>
 <div class="scope-card no" markdown>
 ### ✕ Fuera de alcance
