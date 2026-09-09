@@ -31,6 +31,45 @@ El proyecto necesita dos vistas complementarias sobre el mismo origen de datos:
 !!! note "¿Por qué no Kappa?"
     Kappa no se justifica porque el reprocesamiento de 16 años de histórico horario (~146,000 registros) es más eficiente como batch por lotes que como replay de un log de eventos único, y porque el curso pide explícitamente ambas capas (U1 batch + U2 streaming) tratadas de forma distinta.
 
+```mermaid
+flowchart LR
+    subgraph Fuente["Fuente de datos"]
+        Hist["Open-Meteo<br/>Historical API"]
+        Fore["Open-Meteo<br/>Forecast API"]
+    end
+
+    subgraph BatchLayer["Capa Batch (U1 - construida)"]
+        direction TB
+        PySpark["PySpark<br/>extraccion, transformacion,<br/>agregacion diaria"]
+        Gold["Gold Parquet<br/>particionado por anio"]
+        ML["Modelos ML<br/>heladas + precipitacion<br/>(LogisticRegression)"]
+        PySpark --> Gold --> ML
+    end
+
+    subgraph SpeedLayer["Capa Speed / Streaming (U2 - pendiente)"]
+        direction TB
+        Producer["Script productor<br/>polling cada hora"]
+        Kafka["Kafka<br/>topico clima-juliaca"]
+        Streaming["Spark Structured<br/>Streaming + inferencia"]
+        Producer --> Kafka --> Streaming
+    end
+
+    subgraph ServingLayer["Capa de Servicio"]
+        Grafana["Grafana<br/>tablero de riesgo climatico"]
+    end
+
+    Hist --> PySpark
+    Fore --> Producer
+    ML -.->|"modelo entrenado"| Streaming
+    ML --> Grafana
+    Streaming --> Grafana
+
+    classDef today fill:#ffe08a,stroke:#9a6b00,stroke-width:2px,color:#111;
+    class PySpark,Gold,ML today;
+```
+
+*Figura 1. Arquitectura Lambda del proyecto — la capa batch (naranja) ya está construida en U1; la capa speed/streaming y la capa de servicio en Grafana son contenido de U2.*
+
 ## Fuentes de datos
 
 === "Batch"
