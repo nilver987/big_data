@@ -22,15 +22,6 @@ spark = (
 spark
 ```
 
-    WARNING: Using incubator modules: jdk.incubator.vector
-    Using Spark's default log4j profile: org/apache/spark/log4j2-defaults.properties
-    Setting default log level to "WARN".
-    To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
-    26/09/09 13:07:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-    26/09/09 13:07:54 WARN Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
-    26/09/09 13:07:54 WARN Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
-
-
 
 
 
@@ -41,11 +32,11 @@ spark
 <div>
     <p><b>SparkContext</b></p>
 
-    <p><a href="http://a59cd1fa6c04:4042">Spark UI</a></p>
+    <p><a href="http://611f57b01f92:4040">Spark UI</a></p>
 
     <dl>
       <dt>Version</dt>
-        <dd><code>v4.2.0</code></dd>
+        <dd><code>v3.5.0</code></dd>
       <dt>Master</dt>
         <dd><code>local[*]</code></dd>
       <dt>AppName</dt>
@@ -64,7 +55,7 @@ spark
 ```python
 from pyspark.sql.types import StructType, StructField, TimestampType, DoubleType
 
-ORIGEN_DATOS = "/opt/bigdata-u1/data"
+ORIGEN_DATOS = "data"
 
 schema_clima = StructType([
     StructField("time", TimestampType(), nullable=False),
@@ -106,6 +97,57 @@ print(f"Total filas: {df.count():,}")
     |2010-01-01 04:00:00|           4.9|          0.0|                83.0|       85.0|           5.9|           643.2|
     +-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
     only showing top 5 rows
+    
+    Total filas: 146,280
+
+
+
+```python
+from pyspark.sql.types import StructType, StructField, TimestampType, DoubleType
+
+ORIGEN_DATOS = "data"
+
+schema_clima = StructType([
+    StructField("time", TimestampType(), nullable=False),
+    StructField("temperature_2m", DoubleType(), nullable=True),
+    StructField("precipitation", DoubleType(), nullable=True),
+    StructField("relative_humidity_2m", DoubleType(), nullable=True),
+    StructField("cloud_cover", DoubleType(), nullable=True),
+    StructField("wind_speed_10m", DoubleType(), nullable=True),
+    StructField("surface_pressure", DoubleType(), nullable=True),
+])
+
+df = (
+    spark.read
+    .option("timestampFormat", "yyyy-MM-dd'T'HH:mm")
+    .csv(f"{ORIGEN_DATOS}/clima_juliaca_horario.csv", header=True, schema=schema_clima)
+)
+
+df.printSchema()
+df.show(5)
+print(f"Total filas: {df.count():,}")
+```
+
+    root
+     |-- time: timestamp (nullable = true)
+     |-- temperature_2m: double (nullable = true)
+     |-- precipitation: double (nullable = true)
+     |-- relative_humidity_2m: double (nullable = true)
+     |-- cloud_cover: double (nullable = true)
+     |-- wind_speed_10m: double (nullable = true)
+     |-- surface_pressure: double (nullable = true)
+    
+    +-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+    |               time|temperature_2m|precipitation|relative_humidity_2m|cloud_cover|wind_speed_10m|surface_pressure|
+    +-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+    |2010-01-01 00:00:00|           6.8|          0.0|                84.0|       93.0|           4.9|           645.3|
+    |2010-01-01 01:00:00|           5.5|          0.0|                91.0|       89.0|           6.2|           643.7|
+    |2010-01-01 02:00:00|           5.5|          0.0|                83.0|       91.0|           6.6|           643.4|
+    |2010-01-01 03:00:00|           5.1|          0.0|                83.0|       96.0|           6.2|           643.1|
+    |2010-01-01 04:00:00|           4.9|          0.0|                83.0|       85.0|           5.9|           643.2|
+    +-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+    only showing top 5 rows
+    
     Total filas: 146,280
 
 
@@ -120,8 +162,6 @@ df.select([
 ]).show(vertical=True, truncate=False)
 ```
 
-    [Stage 4:=============================>                             (1 + 1) / 2]
-
     -RECORD 0-------------------
      time                 | 0   
      temperature_2m       | 0   
@@ -132,8 +172,6 @@ df.select([
      surface_pressure     | 0   
     
 
-
-                                                                                    
 
 ## 1.4 Gráfico de verificación de nulos
 
@@ -151,7 +189,7 @@ plt.show()
 
 
     
-![png](output_8_0.png)
+![png](output_9_0.png)
     
 
 
@@ -177,8 +215,6 @@ df_diario.orderBy("fecha").show(5)
 print(f"Total dias: {df_diario.count():,}")
 ```
 
-                                                                                    
-
     +----------+------------------+-----------------+------------------+-----------------+
     |     fecha|   precip_acum_dia| humedad_prom_dia|nubosidad_prom_dia| presion_prom_dia|
     +----------+------------------+-----------------+------------------+-----------------+
@@ -189,6 +225,7 @@ print(f"Total dias: {df_diario.count():,}")
     |2010-01-05|               3.7|77.79166666666667|            90.125|            647.1|
     +----------+------------------+-----------------+------------------+-----------------+
     only showing top 5 rows
+    
     Total dias: 6,095
 
 
@@ -196,16 +233,21 @@ print(f"Total dias: {df_diario.count():,}")
 
 
 ```python
+from pyspark.sql.functions import when
+
+UMBRAL_LLUVIA = 2.0
+
+df_diario = df_diario.withColumn(
+    "hay_lluvia_intensa",
+    when(col("precip_acum_dia") > UMBRAL_LLUVIA, 1.0).otherwise(0.0)
+)
+
 conteo_rdd = df_diario.rdd.filter(lambda fila: fila["hay_lluvia_intensa"] == 1.0).count()
 print(f"Dias con lluvia intensa (via RDD): {conteo_rdd:,}")
 ```
 
-    [Stage 577:>                                                        (0 + 1) / 1]
-
     Dias con lluvia intensa (via RDD): 2,164
 
-
-                                                                                    
 
 ## 1.6 Resumen mensual y gráfico de tendencia
 
@@ -235,7 +277,7 @@ plt.show()
 
 
     
-![png](output_14_0.png)
+![png](output_15_0.png)
     
 
 
@@ -269,6 +311,7 @@ df_diario.select("fecha", "precip_acum_dia", "hay_lluvia_intensa", "dia_anio", "
     |2010-02-11|               0.0|               0.0|      42|0.6616346182422783|0.7498264012045686|
     +----------+------------------+------------------+--------+------------------+------------------+
     only showing top 5 rows
+    
 
 
 ## 1.8 Evidencia del plan de ejecución (lazy evaluation)
@@ -336,7 +379,7 @@ assert total == sin_duplicar, "Hay fechas duplicadas en la agregacion diaria"
 ```python
 from pyspark.sql.functions import year
 
-RUTA_GOLD = "/opt/bigdata-u1/artifacts/precipitacion_gold"
+RUTA_GOLD = "artifacts/precipitacion_gold"
 
 df_diario_particionable = df_diario.withColumn("anio", year(col("fecha")))
 
@@ -354,8 +397,6 @@ print("Carpetas de particion creadas:")
 for carpeta in sorted(os.listdir(RUTA_GOLD)):
     print(" -", carpeta)
 ```
-
-                                                                                    
 
     Carpetas de particion creadas:
      - ._SUCCESS.crc
@@ -393,17 +434,13 @@ assert total_original == total_leido, "Se perdieron filas al escribir/leer el Pa
 df_gold.filter(col("anio") == 2022).explain()
 ```
 
-    [Stage 57:====>                                                   (1 + 11) / 12]
-
     Filas escritas: 6,095, filas leidas de vuelta: 6,095
     == Physical Plan ==
     *(1) ColumnarToRow
-    +- FileScan parquet [fecha#322,precip_acum_dia#323,humedad_prom_dia#324,nubosidad_prom_dia#325,presion_prom_dia#326,hay_lluvia_intensa#327,dia_anio#328,dia_sin#329,dia_cos#330,anio#331] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/opt/bigdata-u1/artifacts/precipitacion_gold], PartitionFilters: [isnotnull(anio#331), (anio#331 = 2022)], PushedFilters: [], ReadSchema: struct<fecha:date,precip_acum_dia:double,humedad_prom_dia:double,nubosidad_prom_dia:double,presio...
+    +- FileScan parquet [fecha#775,precip_acum_dia#776,humedad_prom_dia#777,nubosidad_prom_dia#778,presion_prom_dia#779,hay_lluvia_intensa#780,dia_anio#781,dia_sin#782,dia_cos#783,anio#784] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/home/jovyan/u1/artifacts/precipitacion_gold], PartitionFilters: [isnotnull(anio#784), (anio#784 = 2022)], PushedFilters: [], ReadSchema: struct<fecha:date,precip_acum_dia:double,humedad_prom_dia:double,nubosidad_prom_dia:double,presio...
     
     
 
-
-                                                                                    
 
 ## 1.12 Resumen mensual (probabilidad de lluvia intensa) y gráfico de tendencia
 
@@ -431,7 +468,7 @@ plt.show()
 
 
     
-![png](output_26_0.png)
+![png](output_27_0.png)
     
 
 
@@ -449,7 +486,7 @@ datos_boxplot = (
 grupos = [datos_boxplot[datos_boxplot["mes"] == m]["precip_acum_dia"].values for m in range(1, 13)]
 
 plt.figure(figsize=(10, 5))
-plt.boxplot(grupos, tick_labels=range(1, 13))
+plt.boxplot(grupos, labels=range(1, 13))
 plt.axhline(y=2, color="red", linestyle="--", label="Umbral lluvia intensa (2mm)")
 plt.xlabel("Mes")
 plt.ylabel("Precipitación acumulada diaria (mm)")
@@ -460,7 +497,7 @@ plt.show()
 
 
     
-![png](output_28_0.png)
+![png](output_29_0.png)
     
 
 
@@ -492,7 +529,7 @@ plt.show()
 
 
     
-![png](output_31_0.png)
+![png](output_32_0.png)
     
 
 
@@ -524,7 +561,7 @@ plt.show()
 
 
     
-![png](output_33_0.png)
+![png](output_34_0.png)
     
 
 
@@ -553,17 +590,9 @@ print(f"Filas train: {df_train.count():,}")
 print(f"Filas test: {df_test.count():,}")
 ```
 
-                                                                                    
+    Filas train: 4,871
+    Filas test: 1,224
 
-    Filas train: 4,896
-
-
-    [Stage 63:==========================================>              (9 + 3) / 12]
-
-    Filas test: 1,199
-
-
-                                                                                    
 
 ## 1.17 Entrenar y evaluar Config A (solo estacionalidad)
 
@@ -586,13 +615,8 @@ f1_simple = evaluador_f1.evaluate(predicciones_log_simple)
 print(f"Config A (solo dia del anio) -> AUC: {auc_simple:.4f}, F1: {f1_simple:.4f}")
 ```
 
-    netlib-blas: JNI_OnLoad: dlopen(libblas.so.3) failed: libblas.so.3: cannot open shared object file: No such file or directory
-    [Stage 104:====>                                                  (1 + 11) / 12]
+    Config A (solo dia del anio) -> AUC: 0.8305, F1: 0.7678
 
-    Config A (solo dia del anio) -> AUC: 0.8369, F1: 0.7728
-
-
-                                                                                    
 
 ## 1.18 Entrenar y evaluar Config B (estacionalidad + contexto meteorológico)
 
@@ -618,21 +642,19 @@ print(f"Config B (dia + humedad + nubosidad + presion) -> AUC: {auc_enriquecido:
 
 
 ```python
-evaluador_precision = MulticlassClassificationEvaluator(labelCol="hay_lluvia_intensa", predictionCol="prediction", metricName="weightedPrecision")
-evaluador_recall = MulticlassClassificationEvaluator(labelCol="hay_lluvia_intensa", predictionCol="prediction", metricName="weightedRecall")
+log_enriquecido = LogisticRegression(featuresCol="features_enriquecido", labelCol="hay_lluvia_intensa")
+modelo_log_enriquecido = log_enriquecido.fit(df_train)
 
-precision_b = evaluador_precision.evaluate(predicciones_log_enriquecido)
-recall_b = evaluador_recall.evaluate(predicciones_log_enriquecido)
+predicciones_log_enriquecido = modelo_log_enriquecido.transform(df_test)
 
-print(f"Config B -> Precision: {precision_b:.4f}, Recall: {recall_b:.4f}")
+auc_enriquecido = evaluador_auc.evaluate(predicciones_log_enriquecido)
+f1_enriquecido = evaluador_f1.evaluate(predicciones_log_enriquecido)
+
+print(f"Config B (dia + humedad + nubosidad + presion) -> AUC: {auc_enriquecido:.4f}, F1: {f1_enriquecido:.4f}")
 ```
 
-                                                                                    
+    Config B (dia + humedad + nubosidad + presion) -> AUC: 0.9411, F1: 0.8680
 
-    Config B -> Precision: 0.8745, Recall: 0.8732
-
-
-                                                                                    
 
 ## 1.19 Matriz de confusión - Config B
 
@@ -668,7 +690,7 @@ plt.show()
 
 
     
-![png](output_43_1.png)
+![png](output_44_1.png)
     
 
 
@@ -704,7 +726,7 @@ plt.show()
 
 
     
-![png](output_45_0.png)
+![png](output_46_0.png)
     
 
 
@@ -712,12 +734,17 @@ plt.show()
 
 
 ```python
-RUTA_MODELO = "/opt/bigdata-u1/artifacts/modelo_precipitacion_config_b"
+RUTA_MODELO = "artifacts/modelo_precipitacion_config_b"
 
 modelo_log_enriquecido.write().overwrite().save(RUTA_MODELO)
 
 print(f"Modelo guardado en: {RUTA_MODELO}")
 ```
 
-    Modelo guardado en: /opt/bigdata-u1/artifacts/modelo_precipitacion_config_b
+    Modelo guardado en: artifacts/modelo_precipitacion_config_b
 
+
+
+```python
+
+```
