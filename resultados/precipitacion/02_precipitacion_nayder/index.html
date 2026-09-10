@@ -1,0 +1,1734 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Brief Técnico Analítico — Monitoreo y anticipación de riesgos climáticos en Juliaca">
+      
+      
+        <meta name="author" content="Salcca Aquino, Nilver · Arce Mayta, Efrain Nayder">
+      
+      
+      
+        <link rel="prev" href="../../heladas/01_heladas_nilver/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>🌧️ Precipitación - Proyecto Sello</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#u1-heladas-y-lluvia-monitoreo-y-anticipacion-de-riesgo-climatico-en-juliaca" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../../.." title="Proyecto Sello" class="md-header__button md-logo" aria-label="Proyecto Sello" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.55 2.66c-.55-.24-1.1-.4-1.67-.51L14.37.84l.9 2.89a7.7 7.7 0 0 0-1.72-1.07m-7.46.8q-.735.525-1.29 1.2l.11-2.82 2.96.69c-.62.2-1.22.52-1.78.93M18 8.73c-.09-.58-.22-1.16-.41-1.7l2.38 1.5-2.05 2.23c.11-.66.13-1.34.08-2.03M3.04 10.32c.07.6.21 1.18.39 1.71l-2.37-1.5L3.1 8.3c-.1.65-.13 1.34-.06 2.02m13.64 11.89c0 .99-.77 1.79-1.73 1.79-.95 0-1.72-.8-1.72-1.79 0-1.18 1.72-3.18 1.72-3.18s1.73 2 1.73 3.18m-10.65-.76c-.1-.38.12-.77.51-.87l1.59-.43L6.96 19a.7.7 0 0 1 0-1c.27-.3.74-.3 1.04 0l1.14 1.14.41-1.58c.1-.39.5-.62.88-.51.39.1.62.5.5.88l-.43 1.57 1.6-.4c.4-.1.78.11.9.5a.74.74 0 0 1-.53.87l-1.58.42 1.16 1.16c.28.27.28.74 0 1.02s-.74.28-1.02 0L9.87 21.9l-.42 1.6c-.1.38-.5.6-.88.5-.39-.1-.6-.5-.51-.88l.44-1.57-1.59.41c-.41.1-.78-.12-.88-.51M19 15.03c-.35 0-.69.05-1 .16v-.16c0-1.82-.81-3.45-2.08-4.53.43-2.45-.82-4.97-3.17-6-2.78-1.23-6.03.03-7.25 2.78-.9 1.99-.5 4.19.77 5.75H6c-2.21 0-4 1.78-4 4 0 1.14.5 2.17 1.27 2.9 0 0 .7.71 1.41 0s0-1.43 0-1.43c-.41-.35-.68-.88-.68-1.47a2 2 0 0 1 2-2h2c0-2.22 1.79-4 4-4a4 4 0 0 1 4 4v2h3a1 1 0 0 1 1 1c0 .54-.45 1-1 1h-1s-1 0-1 1 1 1 1 1h1a3 3 0 0 0 3-3c0-1.66-1.34-3-3-3m-7-6c-1.84 0-3.5.82-4.59 2.13a3.51 3.51 0 0 1-.1-3.07 3.496 3.496 0 0 1 4.62-1.77A3.52 3.52 0 0 1 14 9.37c-.62-.22-1.3-.34-2-.34"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Proyecto Sello
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🌧️ Precipitación
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="teal"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="teal"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/nilver987/big_data" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nilver987/big_data
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestañas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Inicio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../equipo/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Datos del equipo
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../dominio/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Dominio del proyecto
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../dimensiones/asignacion/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Dimensiones de análisis
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../alcance/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Alcance del proyecto
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../heladas/01_heladas_nilver/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Resultados técnicos
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Proyecto Sello" class="md-nav__button md-logo" aria-label="Proyecto Sello" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13.55 2.66c-.55-.24-1.1-.4-1.67-.51L14.37.84l.9 2.89a7.7 7.7 0 0 0-1.72-1.07m-7.46.8q-.735.525-1.29 1.2l.11-2.82 2.96.69c-.62.2-1.22.52-1.78.93M18 8.73c-.09-.58-.22-1.16-.41-1.7l2.38 1.5-2.05 2.23c.11-.66.13-1.34.08-2.03M3.04 10.32c.07.6.21 1.18.39 1.71l-2.37-1.5L3.1 8.3c-.1.65-.13 1.34-.06 2.02m13.64 11.89c0 .99-.77 1.79-1.73 1.79-.95 0-1.72-.8-1.72-1.79 0-1.18 1.72-3.18 1.72-3.18s1.73 2 1.73 3.18m-10.65-.76c-.1-.38.12-.77.51-.87l1.59-.43L6.96 19a.7.7 0 0 1 0-1c.27-.3.74-.3 1.04 0l1.14 1.14.41-1.58c.1-.39.5-.62.88-.51.39.1.62.5.5.88l-.43 1.57 1.6-.4c.4-.1.78.11.9.5a.74.74 0 0 1-.53.87l-1.58.42 1.16 1.16c.28.27.28.74 0 1.02s-.74.28-1.02 0L9.87 21.9l-.42 1.6c-.1.38-.5.6-.88.5-.39-.1-.6-.5-.51-.88l.44-1.57-1.59.41c-.41.1-.78-.12-.88-.51M19 15.03c-.35 0-.69.05-1 .16v-.16c0-1.82-.81-3.45-2.08-4.53.43-2.45-.82-4.97-3.17-6-2.78-1.23-6.03.03-7.25 2.78-.9 1.99-.5 4.19.77 5.75H6c-2.21 0-4 1.78-4 4 0 1.14.5 2.17 1.27 2.9 0 0 .7.71 1.41 0s0-1.43 0-1.43c-.41-.35-.68-.88-.68-1.47a2 2 0 0 1 2-2h2c0-2.22 1.79-4 4-4a4 4 0 0 1 4 4v2h3a1 1 0 0 1 1 1c0 .54-.45 1-1 1h-1s-1 0-1 1 1 1 1 1h1a3 3 0 0 0 3-3c0-1.66-1.34-3-3-3m-7-6c-1.84 0-3.5.82-4.59 2.13a3.51 3.51 0 0 1-.1-3.07 3.496 3.496 0 0 1 4.62-1.77A3.52 3.52 0 0 1 14 9.37c-.62-.22-1.3-.34-2-.34"/></svg>
+
+    </a>
+    Proyecto Sello
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/nilver987/big_data" title="Ir al repositorio" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    nilver987/big_data
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../equipo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Datos del equipo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dominio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dominio del proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dimensiones de análisis
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Dimensiones de análisis
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensiones/asignacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tabla de asignación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensiones/heladas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ❄️ Heladas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../dimensiones/precipitacion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌧️ Precipitación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../alcance/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alcance del proyecto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Resultados técnicos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Resultados técnicos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../heladas/01_heladas_nilver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ❄️ Heladas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌧️ Precipitación
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🌧️ Precipitación
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#11-crear-el-notebook-y-la-sparksession" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Crear el notebook y la SparkSession
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-definir-el-esquema-y-cargar-los-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 Definir el esquema y cargar los datos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-verificar-nulos-en-todas-las-columnas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 Verificar nulos en todas las columnas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-grafico-de-verificacion-de-nulos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 Gráfico de verificación de nulos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-agregar-a-valores-diarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 Agregar a valores diarios
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#151-procesamiento-con-rdd-evidencia-de-bajo-nivel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5.1 Procesamiento con RDD (evidencia de bajo nivel)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-resumen-mensual-y-grafico-de-tendencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 Resumen mensual y gráfico de tendencia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-marcar-lluvia-intensa-y-codificar-el-dia-del-ano-ciclico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.7 Marcar lluvia intensa y codificar el día del año (cíclico)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-evidencia-del-plan-de-ejecucion-lazy-evaluation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.8 Evidencia del plan de ejecución (lazy evaluation)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-verificar-duplicados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.9 Verificar duplicados
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110-escribir-salida-gold-en-parquet-particionada-por-ano" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.10 Escribir salida Gold en Parquet, particionada por año
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111-verificar-lectura-de-vuelta-y-partitionfilters" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.11 Verificar lectura de vuelta y PartitionFilters
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112-resumen-mensual-probabilidad-de-lluvia-intensa-y-grafico-de-tendencia" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.12 Resumen mensual (probabilidad de lluvia intensa) y gráfico de tendencia
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113-distribucion-de-precipitacion-diaria-por-mes-boxplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.13 Distribución de precipitación diaria por mes (boxplot)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114-correlacion-de-cada-variable-con-la-lluvia-intensa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.14 Correlación de cada variable con la lluvia intensa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115-matriz-de-correlacion-completa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.15 Matriz de correlación completa
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116-vectores-de-predictores-dos-configuraciones-y-division-traintest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.16 Vectores de predictores (dos configuraciones) y división train/test
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117-entrenar-y-evaluar-config-a-solo-estacionalidad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.17 Entrenar y evaluar Config A (solo estacionalidad)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118-entrenar-y-evaluar-config-b-estacionalidad-contexto-meteorologico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18 Entrenar y evaluar Config B (estacionalidad + contexto meteorológico)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1181-metricas-adicionales-precision-y-exhaustividad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.18.1 Métricas adicionales: precisión y exhaustividad
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#119-matriz-de-confusion-config-b" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.19 Matriz de confusión - Config B
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#120-matriz-de-confusion-config-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.20 Matriz de confusión - Config A
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#121-guardar-el-modelo-ganador" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.21 Guardar el modelo ganador
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="u1-heladas-y-lluvia-monitoreo-y-anticipacion-de-riesgo-climatico-en-juliaca">U1 - Heladas y Lluvia: Monitoreo y anticipación de riesgo climático en Juliaca<a class="headerlink" href="#u1-heladas-y-lluvia-monitoreo-y-anticipacion-de-riesgo-climatico-en-juliaca" title="Permanent link">#</a></h1>
+<p><strong>Equipo:</strong> BIG IMPACT · <strong>Integrante:</strong> Efrain Nayder Arce Mayta
+<strong>Dimensión:</strong> Precipitación — predictiva, batch (U1)</p>
+<h2 id="11-crear-el-notebook-y-la-sparksession">1.1 Crear el notebook y la SparkSession<a class="headerlink" href="#11-crear-el-notebook-y-la-sparksession" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql</span><span class="w"> </span><span class="kn">import</span> <span class="n">SparkSession</span>
+
+<span class="n">spark</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">SparkSession</span><span class="o">.</span><span class="n">builder</span>
+    <span class="o">.</span><span class="n">appName</span><span class="p">(</span><span class="s2">"bigdata-u1-precipitacion"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">master</span><span class="p">(</span><span class="s2">"local[*]"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">"spark.ui.port"</span><span class="p">,</span> <span class="s2">"4040"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">"spark.sql.shuffle.partitions"</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">config</span><span class="p">(</span><span class="s2">"spark.driver.memory"</span><span class="p">,</span> <span class="s2">"4g"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">getOrCreate</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">spark</span>
+</code></pre></div>
+<pre><code>&lt;div&gt;
+    &lt;p&gt;&lt;b&gt;SparkSession - in-memory&lt;/b&gt;&lt;/p&gt;
+</code></pre>
+<div>
+    <p><b>SparkContext</b></p>
+
+    <p><a href="http://611f57b01f92:4040">Spark UI</a></p>
+
+    <dl>
+      <dt>Version</dt>
+        <dd><code>v3.5.0</code></dd>
+      <dt>Master</dt>
+        <dd><code>local[*]</code></dd>
+      <dt>AppName</dt>
+        <dd><code>bigdata-u1-precipitacion</code></dd>
+    </dl>
+</div>
+
+<pre><code>&lt;/div&gt;
+</code></pre>
+<h2 id="12-definir-el-esquema-y-cargar-los-datos">1.2 Definir el esquema y cargar los datos<a class="headerlink" href="#12-definir-el-esquema-y-cargar-los-datos" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">StructType</span><span class="p">,</span> <span class="n">StructField</span><span class="p">,</span> <span class="n">TimestampType</span><span class="p">,</span> <span class="n">DoubleType</span>
+
+<span class="n">ORIGEN_DATOS</span> <span class="o">=</span> <span class="s2">"data"</span>
+
+<span class="n">schema_clima</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"time"</span><span class="p">,</span> <span class="n">TimestampType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"temperature_2m"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"precipitation"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"relative_humidity_2m"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"cloud_cover"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"wind_speed_10m"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"surface_pressure"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+<span class="p">])</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">spark</span><span class="o">.</span><span class="n">read</span>
+    <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">"timestampFormat"</span><span class="p">,</span> <span class="s2">"yyyy-MM-dd'T'HH:mm"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">ORIGEN_DATOS</span><span class="si">}</span><span class="s2">/clima_juliaca_horario.csv"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema_clima</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total filas: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>root
+ |-- time: timestamp (nullable = true)
+ |-- temperature_2m: double (nullable = true)
+ |-- precipitation: double (nullable = true)
+ |-- relative_humidity_2m: double (nullable = true)
+ |-- cloud_cover: double (nullable = true)
+ |-- wind_speed_10m: double (nullable = true)
+ |-- surface_pressure: double (nullable = true)
+
++-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+|               time|temperature_2m|precipitation|relative_humidity_2m|cloud_cover|wind_speed_10m|surface_pressure|
++-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+|2010-01-01 00:00:00|           6.8|          0.0|                84.0|       93.0|           4.9|           645.3|
+|2010-01-01 01:00:00|           5.5|          0.0|                91.0|       89.0|           6.2|           643.7|
+|2010-01-01 02:00:00|           5.5|          0.0|                83.0|       91.0|           6.6|           643.4|
+|2010-01-01 03:00:00|           5.1|          0.0|                83.0|       96.0|           6.2|           643.1|
+|2010-01-01 04:00:00|           4.9|          0.0|                83.0|       85.0|           5.9|           643.2|
++-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+only showing top 5 rows
+
+Total filas: 146,280
+</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.types</span><span class="w"> </span><span class="kn">import</span> <span class="n">StructType</span><span class="p">,</span> <span class="n">StructField</span><span class="p">,</span> <span class="n">TimestampType</span><span class="p">,</span> <span class="n">DoubleType</span>
+
+<span class="n">ORIGEN_DATOS</span> <span class="o">=</span> <span class="s2">"data"</span>
+
+<span class="n">schema_clima</span> <span class="o">=</span> <span class="n">StructType</span><span class="p">([</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"time"</span><span class="p">,</span> <span class="n">TimestampType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">False</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"temperature_2m"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"precipitation"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"relative_humidity_2m"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"cloud_cover"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"wind_speed_10m"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">StructField</span><span class="p">(</span><span class="s2">"surface_pressure"</span><span class="p">,</span> <span class="n">DoubleType</span><span class="p">(),</span> <span class="n">nullable</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+<span class="p">])</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">spark</span><span class="o">.</span><span class="n">read</span>
+    <span class="o">.</span><span class="n">option</span><span class="p">(</span><span class="s2">"timestampFormat"</span><span class="p">,</span> <span class="s2">"yyyy-MM-dd'T'HH:mm"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">csv</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">ORIGEN_DATOS</span><span class="si">}</span><span class="s2">/clima_juliaca_horario.csv"</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">schema</span><span class="o">=</span><span class="n">schema_clima</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">printSchema</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total filas: </span><span class="si">{</span><span class="n">df</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>root
+ |-- time: timestamp (nullable = true)
+ |-- temperature_2m: double (nullable = true)
+ |-- precipitation: double (nullable = true)
+ |-- relative_humidity_2m: double (nullable = true)
+ |-- cloud_cover: double (nullable = true)
+ |-- wind_speed_10m: double (nullable = true)
+ |-- surface_pressure: double (nullable = true)
+
++-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+|               time|temperature_2m|precipitation|relative_humidity_2m|cloud_cover|wind_speed_10m|surface_pressure|
++-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+|2010-01-01 00:00:00|           6.8|          0.0|                84.0|       93.0|           4.9|           645.3|
+|2010-01-01 01:00:00|           5.5|          0.0|                91.0|       89.0|           6.2|           643.7|
+|2010-01-01 02:00:00|           5.5|          0.0|                83.0|       91.0|           6.6|           643.4|
+|2010-01-01 03:00:00|           5.1|          0.0|                83.0|       96.0|           6.2|           643.1|
+|2010-01-01 04:00:00|           4.9|          0.0|                83.0|       85.0|           5.9|           643.2|
++-------------------+--------------+-------------+--------------------+-----------+--------------+----------------+
+only showing top 5 rows
+
+Total filas: 146,280
+</code></pre>
+<h2 id="13-verificar-nulos-en-todas-las-columnas">1.3 Verificar nulos en todas las columnas<a class="headerlink" href="#13-verificar-nulos-en-todas-las-columnas" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">col</span><span class="p">,</span> <span class="n">count</span> <span class="k">as</span> <span class="n">spark_count</span><span class="p">,</span> <span class="n">when</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">select</span><span class="p">([</span>
+    <span class="n">spark_count</span><span class="p">(</span><span class="n">when</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">(),</span> <span class="n">c</span><span class="p">))</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span>
+<span class="p">])</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="n">vertical</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">truncate</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>-RECORD 0-------------------
+ time                 | 0   
+ temperature_2m       | 0   
+ precipitation        | 0   
+ relative_humidity_2m | 0   
+ cloud_cover          | 0   
+ wind_speed_10m       | 0   
+ surface_pressure     | 0
+</code></pre>
+<h2 id="14-grafico-de-verificacion-de-nulos">1.4 Gráfico de verificación de nulos<a class="headerlink" href="#14-grafico-de-verificacion-de-nulos" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">nulos_dict</span> <span class="o">=</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">isNull</span><span class="p">())</span><span class="o">.</span><span class="n">count</span><span class="p">()</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">}</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">nulos_dict</span><span class="o">.</span><span class="n">keys</span><span class="p">(),</span> <span class="n">nulos_dict</span><span class="o">.</span><span class="n">values</span><span class="p">(),</span> <span class="n">color</span><span class="o">=</span><span class="s2">"firebrick"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Cantidad de nulos"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Verificacion de nulos por columna"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_9_0.png" /></p>
+<h2 id="15-agregar-a-valores-diarios">1.5 Agregar a valores diarios<a class="headerlink" href="#15-agregar-a-valores-diarios" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">to_date</span><span class="p">,</span> <span class="nb">sum</span> <span class="k">as</span> <span class="n">spark_sum</span><span class="p">,</span> <span class="n">avg</span>
+
+<span class="n">df_diario</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">,</span> <span class="n">to_date</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"time"</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+        <span class="n">spark_sum</span><span class="p">(</span><span class="s2">"precipitation"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"precip_acum_dia"</span><span class="p">),</span>
+        <span class="n">avg</span><span class="p">(</span><span class="s2">"relative_humidity_2m"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"humedad_prom_dia"</span><span class="p">),</span>
+        <span class="n">avg</span><span class="p">(</span><span class="s2">"cloud_cover"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"nubosidad_prom_dia"</span><span class="p">),</span>
+        <span class="n">avg</span><span class="p">(</span><span class="s2">"surface_pressure"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"presion_prom_dia"</span><span class="p">),</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">df_diario</span><span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total dias: </span><span class="si">{</span><span class="n">df_diario</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>+----------+------------------+-----------------+------------------+-----------------+
+|     fecha|   precip_acum_dia| humedad_prom_dia|nubosidad_prom_dia| presion_prom_dia|
++----------+------------------+-----------------+------------------+-----------------+
+|2010-01-01|2.5999999999999996|65.29166666666667| 83.95833333333333|645.9083333333333|
+|2010-01-02|               6.7|75.54166666666667| 83.45833333333333|          645.525|
+|2010-01-03|               6.0|73.79166666666667|             99.25|646.1166666666667|
+|2010-01-04|              10.1|79.33333333333333|             99.25|646.1625000000001|
+|2010-01-05|               3.7|77.79166666666667|            90.125|            647.1|
++----------+------------------+-----------------+------------------+-----------------+
+only showing top 5 rows
+
+Total dias: 6,095
+</code></pre>
+<h2 id="151-procesamiento-con-rdd-evidencia-de-bajo-nivel">1.5.1 Procesamiento con RDD (evidencia de bajo nivel)<a class="headerlink" href="#151-procesamiento-con-rdd-evidencia-de-bajo-nivel" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">when</span>
+
+<span class="n">UMBRAL_LLUVIA</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="n">df_diario</span> <span class="o">=</span> <span class="n">df_diario</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span>
+    <span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span>
+    <span class="n">when</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"precip_acum_dia"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">UMBRAL_LLUVIA</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">conteo_rdd</span> <span class="o">=</span> <span class="n">df_diario</span><span class="o">.</span><span class="n">rdd</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">fila</span><span class="p">:</span> <span class="n">fila</span><span class="p">[</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">]</span> <span class="o">==</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Dias con lluvia intensa (via RDD): </span><span class="si">{</span><span class="n">conteo_rdd</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Dias con lluvia intensa (via RDD): 2,164
+</code></pre>
+<h2 id="16-resumen-mensual-y-grafico-de-tendencia">1.6 Resumen mensual y gráfico de tendencia<a class="headerlink" href="#16-resumen-mensual-y-grafico-de-tendencia" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">month</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="n">resumen_mensual</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_diario</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">avg</span><span class="p">(</span><span class="s2">"precip_acum_dia"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"precip_prom_dia"</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">resumen_mensual</span><span class="p">[</span><span class="s2">"mes"</span><span class="p">],</span> <span class="n">resumen_mensual</span><span class="p">[</span><span class="s2">"precip_prom_dia"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"steelblue"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Mes"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Precipitación promedio diaria (mm)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Precipitación promedio diaria por mes - Juliaca (2010-2026)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_15_0.png" /></p>
+<h2 id="17-marcar-lluvia-intensa-y-codificar-el-dia-del-ano-ciclico">1.7 Marcar lluvia intensa y codificar el día del año (cíclico)<a class="headerlink" href="#17-marcar-lluvia-intensa-y-codificar-el-dia-del-ano-ciclico" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">when</span><span class="p">,</span> <span class="n">dayofyear</span><span class="p">,</span> <span class="n">sin</span><span class="p">,</span> <span class="n">cos</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+
+<span class="n">UMBRAL_LLUVIA</span> <span class="o">=</span> <span class="mf">2.0</span>
+
+<span class="n">df_diario</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_diario</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="n">when</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"precip_acum_dia"</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">UMBRAL_LLUVIA</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span><span class="o">.</span><span class="n">otherwise</span><span class="p">(</span><span class="mf">0.0</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"dia_anio"</span><span class="p">,</span> <span class="n">dayofyear</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"dia_sin"</span><span class="p">,</span> <span class="n">sin</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"dia_anio"</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">365</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"dia_cos"</span><span class="p">,</span> <span class="n">cos</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"dia_anio"</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mi">365</span><span class="p">)))</span>
+<span class="p">)</span>
+
+<span class="n">df_diario</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">,</span> <span class="s2">"precip_acum_dia"</span><span class="p">,</span> <span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="s2">"dia_anio"</span><span class="p">,</span> <span class="s2">"dia_sin"</span><span class="p">,</span> <span class="s2">"dia_cos"</span><span class="p">)</span><span class="o">.</span><span class="n">show</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>+----------+------------------+------------------+--------+------------------+------------------+
+|     fecha|   precip_acum_dia|hay_lluvia_intensa|dia_anio|           dia_sin|           dia_cos|
++----------+------------------+------------------+--------+------------------+------------------+
+|2010-01-15|13.999999999999995|               1.0|      15| 0.255353295116187|0.9668478136052775|
+|2010-01-16| 6.700000000000001|               1.0|      16|0.2719581575341055|0.9623090774541486|
+|2010-01-30|1.4000000000000001|               0.0|      30|0.4937755501599772| 0.869589389346611|
+|2010-01-31|               3.5|               1.0|      31|0.5086709438521044|0.8609610158889943|
+|2010-02-11|               0.0|               0.0|      42|0.6616346182422783|0.7498264012045686|
++----------+------------------+------------------+--------+------------------+------------------+
+only showing top 5 rows
+</code></pre>
+<h2 id="18-evidencia-del-plan-de-ejecucion-lazy-evaluation">1.8 Evidencia del plan de ejecución (lazy evaluation)<a class="headerlink" href="#18-evidencia-del-plan-de-ejecucion-lazy-evaluation" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">df_diario</span><span class="o">.</span><span class="n">explain</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>== Parsed Logical Plan ==
+'Project [unresolvedstarwithcolumns(dia_cos, 'cos('`*`('dia_anio, 0.01721420632103996)), None)]
++- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, hay_lluvia_intensa#217, dia_anio#218, SIN((cast(dia_anio#218 as double) * 0.01721420632103996)) AS dia_sin#219]
+   +- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, hay_lluvia_intensa#217, dayofyear(fecha#112) AS dia_anio#218]
+      +- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, CASE WHEN (precip_acum_dia#113 &gt; 2.0) THEN 1.0 ELSE 0.0 END AS hay_lluvia_intensa#217]
+         +- Aggregate [fecha#112], [fecha#112, sum(precipitation#2) AS precip_acum_dia#113, avg(relative_humidity_2m#3) AS humedad_prom_dia#114, avg(cloud_cover#4) AS nubosidad_prom_dia#115, avg(surface_pressure#6) AS presion_prom_dia#116]
+            +- Project [time#0, temperature_2m#1, precipitation#2, relative_humidity_2m#3, cloud_cover#4, wind_speed_10m#5, surface_pressure#6, to_date(time#0, None, Some(Etc/UTC), true) AS fecha#112]
+               +- Relation [time#0,temperature_2m#1,precipitation#2,relative_humidity_2m#3,cloud_cover#4,wind_speed_10m#5,surface_pressure#6] csv
+
+== Analyzed Logical Plan ==
+fecha: date, precip_acum_dia: double, humedad_prom_dia: double, nubosidad_prom_dia: double, presion_prom_dia: double, hay_lluvia_intensa: double, dia_anio: int, dia_sin: double, dia_cos: double
+Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, hay_lluvia_intensa#217, dia_anio#218, dia_sin#219, COS((cast(dia_anio#218 as double) * 0.01721420632103996)) AS dia_cos#220]
++- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, hay_lluvia_intensa#217, dia_anio#218, SIN((cast(dia_anio#218 as double) * 0.01721420632103996)) AS dia_sin#219]
+   +- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, hay_lluvia_intensa#217, dayofyear(fecha#112) AS dia_anio#218]
+      +- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, CASE WHEN (precip_acum_dia#113 &gt; 2.0) THEN 1.0 ELSE 0.0 END AS hay_lluvia_intensa#217]
+         +- Aggregate [fecha#112], [fecha#112, sum(precipitation#2) AS precip_acum_dia#113, avg(relative_humidity_2m#3) AS humedad_prom_dia#114, avg(cloud_cover#4) AS nubosidad_prom_dia#115, avg(surface_pressure#6) AS presion_prom_dia#116]
+            +- Project [time#0, temperature_2m#1, precipitation#2, relative_humidity_2m#3, cloud_cover#4, wind_speed_10m#5, surface_pressure#6, to_date(time#0, None, Some(Etc/UTC), true) AS fecha#112]
+               +- Relation [time#0,temperature_2m#1,precipitation#2,relative_humidity_2m#3,cloud_cover#4,wind_speed_10m#5,surface_pressure#6] csv
+
+== Optimized Logical Plan ==
+Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, hay_lluvia_intensa#217, dia_anio#218, SIN((cast(dia_anio#218 as double) * 0.01721420632103996)) AS dia_sin#219, COS((cast(dia_anio#218 as double) * 0.01721420632103996)) AS dia_cos#220]
++- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, CASE WHEN (precip_acum_dia#113 &gt; 2.0) THEN 1.0 ELSE 0.0 END AS hay_lluvia_intensa#217, dayofyear(fecha#112) AS dia_anio#218]
+   +- Aggregate [fecha#112], [fecha#112, sum(precipitation#2) AS precip_acum_dia#113, avg(relative_humidity_2m#3) AS humedad_prom_dia#114, avg(cloud_cover#4) AS nubosidad_prom_dia#115, avg(surface_pressure#6) AS presion_prom_dia#116]
+      +- Project [precipitation#2, relative_humidity_2m#3, cloud_cover#4, surface_pressure#6, cast(time#0 as date) AS fecha#112]
+         +- Relation [time#0,temperature_2m#1,precipitation#2,relative_humidity_2m#3,cloud_cover#4,wind_speed_10m#5,surface_pressure#6] csv
+
+== Physical Plan ==
+AdaptiveSparkPlan isFinalPlan=false
++- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, hay_lluvia_intensa#217, dia_anio#218, SIN((cast(dia_anio#218 as double) * 0.01721420632103996)) AS dia_sin#219, COS((cast(dia_anio#218 as double) * 0.01721420632103996)) AS dia_cos#220]
+   +- Project [fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116, CASE WHEN (precip_acum_dia#113 &gt; 2.0) THEN 1.0 ELSE 0.0 END AS hay_lluvia_intensa#217, dayofyear(fecha#112) AS dia_anio#218]
+      +- HashAggregate(keys=[fecha#112], functions=[sum(precipitation#2), avg(relative_humidity_2m#3), avg(cloud_cover#4), avg(surface_pressure#6)], output=[fecha#112, precip_acum_dia#113, humedad_prom_dia#114, nubosidad_prom_dia#115, presion_prom_dia#116])
+         +- Exchange hashpartitioning(fecha#112, 8), ENSURE_REQUIREMENTS, [plan_id=470]
+            +- HashAggregate(keys=[fecha#112], functions=[partial_sum(precipitation#2), partial_avg(relative_humidity_2m#3), partial_avg(cloud_cover#4), partial_avg(surface_pressure#6)], output=[fecha#112, sum#141, sum#142, count#143L, sum#144, count#145L, sum#146, count#147L])
+               +- Project [precipitation#2, relative_humidity_2m#3, cloud_cover#4, surface_pressure#6, cast(time#0 as date) AS fecha#112]
+                  +- FileScan csv [time#0,precipitation#2,relative_humidity_2m#3,cloud_cover#4,surface_pressure#6] Batched: false, DataFilters: [], Format: CSV, Location: InMemoryFileIndex(1 paths)[file:/opt/bigdata-u1/data/clima_juliaca_horario.csv], PartitionFilters: [], PushedFilters: [], ReadSchema: struct&lt;time:timestamp,precipitation:double,relative_humidity_2m:double,cloud_cover:double,surface...
+</code></pre>
+<h2 id="19-verificar-duplicados">1.9 Verificar duplicados<a class="headerlink" href="#19-verificar-duplicados" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">total</span> <span class="o">=</span> <span class="n">df_diario</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">sin_duplicar</span> <span class="o">=</span> <span class="n">df_diario</span><span class="o">.</span><span class="n">dropDuplicates</span><span class="p">([</span><span class="s2">"fecha"</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Total: </span><span class="si">{</span><span class="n">total</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">, sin duplicar por fecha: </span><span class="si">{</span><span class="n">sin_duplicar</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">total</span> <span class="o">==</span> <span class="n">sin_duplicar</span><span class="p">,</span> <span class="s2">"Hay fechas duplicadas en la agregacion diaria"</span>
+</code></pre></div>
+<pre><code>Total: 6,095, sin duplicar por fecha: 6,095
+</code></pre>
+<h2 id="110-escribir-salida-gold-en-parquet-particionada-por-ano">1.10 Escribir salida Gold en Parquet, particionada por año<a class="headerlink" href="#110-escribir-salida-gold-en-parquet-particionada-por-ano" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.sql.functions</span><span class="w"> </span><span class="kn">import</span> <span class="n">year</span>
+
+<span class="n">RUTA_GOLD</span> <span class="o">=</span> <span class="s2">"artifacts/precipitacion_gold"</span>
+
+<span class="n">df_diario_particionable</span> <span class="o">=</span> <span class="n">df_diario</span><span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"anio"</span><span class="p">,</span> <span class="n">year</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">)))</span>
+
+<span class="p">(</span>
+    <span class="n">df_diario_particionable</span>
+    <span class="o">.</span><span class="n">repartition</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">write</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">"parquet"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="s2">"overwrite"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">partitionBy</span><span class="p">(</span><span class="s2">"anio"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">RUTA_GOLD</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Carpetas de particion creadas:"</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">carpeta</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">RUTA_GOLD</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">" -"</span><span class="p">,</span> <span class="n">carpeta</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Carpetas de particion creadas:
+ - ._SUCCESS.crc
+ - _SUCCESS
+ - anio=2010
+ - anio=2011
+ - anio=2012
+ - anio=2013
+ - anio=2014
+ - anio=2015
+ - anio=2016
+ - anio=2017
+ - anio=2018
+ - anio=2019
+ - anio=2020
+ - anio=2021
+ - anio=2022
+ - anio=2023
+ - anio=2024
+ - anio=2025
+ - anio=2026
+</code></pre>
+<h2 id="111-verificar-lectura-de-vuelta-y-partitionfilters">1.11 Verificar lectura de vuelta y PartitionFilters<a class="headerlink" href="#111-verificar-lectura-de-vuelta-y-partitionfilters" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">df_gold</span> <span class="o">=</span> <span class="n">spark</span><span class="o">.</span><span class="n">read</span><span class="o">.</span><span class="n">parquet</span><span class="p">(</span><span class="n">RUTA_GOLD</span><span class="p">)</span>
+
+<span class="n">total_original</span> <span class="o">=</span> <span class="n">df_diario_particionable</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="n">total_leido</span> <span class="o">=</span> <span class="n">df_gold</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Filas escritas: </span><span class="si">{</span><span class="n">total_original</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">, filas leidas de vuelta: </span><span class="si">{</span><span class="n">total_leido</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">total_original</span> <span class="o">==</span> <span class="n">total_leido</span><span class="p">,</span> <span class="s2">"Se perdieron filas al escribir/leer el Parquet"</span>
+
+<span class="n">df_gold</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"anio"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2022</span><span class="p">)</span><span class="o">.</span><span class="n">explain</span><span class="p">()</span>
+</code></pre></div>
+<pre><code>Filas escritas: 6,095, filas leidas de vuelta: 6,095
+== Physical Plan ==
+*(1) ColumnarToRow
++- FileScan parquet [fecha#775,precip_acum_dia#776,humedad_prom_dia#777,nubosidad_prom_dia#778,presion_prom_dia#779,hay_lluvia_intensa#780,dia_anio#781,dia_sin#782,dia_cos#783,anio#784] Batched: true, DataFilters: [], Format: Parquet, Location: InMemoryFileIndex(1 paths)[file:/home/jovyan/u1/artifacts/precipitacion_gold], PartitionFilters: [isnotnull(anio#784), (anio#784 = 2022)], PushedFilters: [], ReadSchema: struct&lt;fecha:date,precip_acum_dia:double,humedad_prom_dia:double,nubosidad_prom_dia:double,presio...
+</code></pre>
+<h2 id="112-resumen-mensual-probabilidad-de-lluvia-intensa-y-grafico-de-tendencia">1.12 Resumen mensual (probabilidad de lluvia intensa) y gráfico de tendencia<a class="headerlink" href="#112-resumen-mensual-probabilidad-de-lluvia-intensa-y-grafico-de-tendencia" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">resumen_mensual</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_diario</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span><span class="n">avg</span><span class="p">(</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">)</span><span class="o">.</span><span class="n">alias</span><span class="p">(</span><span class="s2">"prob_lluvia"</span><span class="p">))</span>
+    <span class="o">.</span><span class="n">orderBy</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">resumen_mensual</span><span class="p">[</span><span class="s2">"mes"</span><span class="p">],</span> <span class="n">resumen_mensual</span><span class="p">[</span><span class="s2">"prob_lluvia"</span><span class="p">]</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"steelblue"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Umbral 30%"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Mes"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Probabilidad de lluvia intensa (%)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Probabilidad de lluvia intensa por mes - Juliaca (2010-2026)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_27_0.png" /></p>
+<h2 id="113-distribucion-de-precipitacion-diaria-por-mes-boxplot">1.13 Distribución de precipitación diaria por mes (boxplot)<a class="headerlink" href="#113-distribucion-de-precipitacion-diaria-por-mes-boxplot" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">datos_boxplot</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df_diario</span>
+    <span class="o">.</span><span class="n">withColumn</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">,</span> <span class="n">month</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="s2">"fecha"</span><span class="p">)))</span>
+    <span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">"mes"</span><span class="p">,</span> <span class="s2">"precip_acum_dia"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">grupos</span> <span class="o">=</span> <span class="p">[</span><span class="n">datos_boxplot</span><span class="p">[</span><span class="n">datos_boxplot</span><span class="p">[</span><span class="s2">"mes"</span><span class="p">]</span> <span class="o">==</span> <span class="n">m</span><span class="p">][</span><span class="s2">"precip_acum_dia"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">)]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">grupos</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">13</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"red"</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s2">"--"</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s2">"Umbral lluvia intensa (2mm)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Mes"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">"Precipitación acumulada diaria (mm)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Distribución de precipitación diaria por mes - Juliaca (2010-2026)"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_29_0.png" /></p>
+<h2 id="114-correlacion-de-cada-variable-con-la-lluvia-intensa">1.14 Correlación de cada variable con la lluvia intensa<a class="headerlink" href="#114-correlacion-de-cada-variable-con-la-lluvia-intensa" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="n">predictores_candidatos</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"dia_sin"</span><span class="p">,</span> <span class="s2">"dia_cos"</span><span class="p">,</span> <span class="s2">"humedad_prom_dia"</span><span class="p">,</span> <span class="s2">"nubosidad_prom_dia"</span><span class="p">,</span> <span class="s2">"presion_prom_dia"</span><span class="p">]</span>
+
+<span class="n">correlaciones</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">p</span><span class="p">:</span> <span class="n">df_diario</span><span class="o">.</span><span class="n">stat</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="s2">"hay_lluvia_intensa"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">predictores_candidatos</span>
+<span class="p">}</span>
+
+<span class="n">df_corr</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">correlaciones</span><span class="o">.</span><span class="n">items</span><span class="p">()),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">"variable"</span><span class="p">,</span> <span class="s2">"correlacion"</span><span class="p">])</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">"correlacion"</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">df_corr</span><span class="p">[</span><span class="s2">"variable"</span><span class="p">],</span> <span class="n">df_corr</span><span class="p">[</span><span class="s2">"correlacion"</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s2">"steelblue"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">"Correlación con hay_lluvia_intensa"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Correlacion de cada variable con la lluvia intensa"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_32_0.png" /></p>
+<h2 id="115-matriz-de-correlacion-completa">1.15 Matriz de correlación completa<a class="headerlink" href="#115-matriz-de-correlacion-completa" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="n">variables_matriz</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"precip_acum_dia"</span><span class="p">,</span> <span class="s2">"humedad_prom_dia"</span><span class="p">,</span> <span class="s2">"nubosidad_prom_dia"</span><span class="p">,</span> <span class="s2">"presion_prom_dia"</span><span class="p">,</span> <span class="s2">"dia_sin"</span><span class="p">,</span> <span class="s2">"dia_cos"</span><span class="p">,</span> <span class="s2">"hay_lluvia_intensa"</span><span class="p">]</span>
+
+<span class="n">matriz</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">)))</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">v1</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span><span class="p">,</span> <span class="n">v2</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">):</span>
+        <span class="n">matriz</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_diario</span><span class="o">.</span><span class="n">stat</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">v1</span><span class="p">,</span> <span class="n">v2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">matriz</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"coolwarm"</span><span class="p">,</span> <span class="n">vmin</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Correlación"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">)),</span> <span class="n">variables_matriz</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"right"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">)),</span> <span class="n">variables_matriz</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">)):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">variables_matriz</span><span class="p">)):</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">matriz</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s2">"black"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Matriz de correlacion completa"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_34_0.png" /></p>
+<h2 id="116-vectores-de-predictores-dos-configuraciones-y-division-traintest">1.16 Vectores de predictores (dos configuraciones) y división train/test<a class="headerlink" href="#116-vectores-de-predictores-dos-configuraciones-y-division-traintest" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.ml.feature</span><span class="w"> </span><span class="kn">import</span> <span class="n">VectorAssembler</span>
+
+<span class="n">assembler_simple</span> <span class="o">=</span> <span class="n">VectorAssembler</span><span class="p">(</span>
+    <span class="n">inputCols</span><span class="o">=</span><span class="p">[</span><span class="s2">"dia_sin"</span><span class="p">,</span> <span class="s2">"dia_cos"</span><span class="p">],</span>
+    <span class="n">outputCol</span><span class="o">=</span><span class="s2">"features_simple"</span>
+<span class="p">)</span>
+
+<span class="n">assembler_enriquecido</span> <span class="o">=</span> <span class="n">VectorAssembler</span><span class="p">(</span>
+    <span class="n">inputCols</span><span class="o">=</span><span class="p">[</span><span class="s2">"dia_sin"</span><span class="p">,</span> <span class="s2">"dia_cos"</span><span class="p">,</span> <span class="s2">"humedad_prom_dia"</span><span class="p">,</span> <span class="s2">"nubosidad_prom_dia"</span><span class="p">,</span> <span class="s2">"presion_prom_dia"</span><span class="p">],</span>
+    <span class="n">outputCol</span><span class="o">=</span><span class="s2">"features_enriquecido"</span>
+<span class="p">)</span>
+
+<span class="n">df_features</span> <span class="o">=</span> <span class="n">assembler_simple</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_gold</span><span class="p">)</span>
+<span class="n">df_features</span> <span class="o">=</span> <span class="n">assembler_enriquecido</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_features</span><span class="p">)</span>
+
+<span class="n">df_train</span><span class="p">,</span> <span class="n">df_test</span> <span class="o">=</span> <span class="n">df_features</span><span class="o">.</span><span class="n">randomSplit</span><span class="p">([</span><span class="mf">0.8</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">],</span> <span class="n">seed</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Filas train: </span><span class="si">{</span><span class="n">df_train</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Filas test: </span><span class="si">{</span><span class="n">df_test</span><span class="o">.</span><span class="n">count</span><span class="p">()</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Filas train: 4,871
+Filas test: 1,224
+</code></pre>
+<h2 id="117-entrenar-y-evaluar-config-a-solo-estacionalidad">1.17 Entrenar y evaluar Config A (solo estacionalidad)<a class="headerlink" href="#117-entrenar-y-evaluar-config-a-solo-estacionalidad" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.ml.classification</span><span class="w"> </span><span class="kn">import</span> <span class="n">LogisticRegression</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyspark.ml.evaluation</span><span class="w"> </span><span class="kn">import</span> <span class="n">BinaryClassificationEvaluator</span><span class="p">,</span> <span class="n">MulticlassClassificationEvaluator</span>
+
+<span class="n">log_simple</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">featuresCol</span><span class="o">=</span><span class="s2">"features_simple"</span><span class="p">,</span> <span class="n">labelCol</span><span class="o">=</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">)</span>
+<span class="n">modelo_log_simple</span> <span class="o">=</span> <span class="n">log_simple</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span>
+
+<span class="n">predicciones_log_simple</span> <span class="o">=</span> <span class="n">modelo_log_simple</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_test</span><span class="p">)</span>
+
+<span class="n">evaluador_auc</span> <span class="o">=</span> <span class="n">BinaryClassificationEvaluator</span><span class="p">(</span><span class="n">labelCol</span><span class="o">=</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="n">metricName</span><span class="o">=</span><span class="s2">"areaUnderROC"</span><span class="p">)</span>
+<span class="n">evaluador_f1</span> <span class="o">=</span> <span class="n">MulticlassClassificationEvaluator</span><span class="p">(</span><span class="n">labelCol</span><span class="o">=</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="n">predictionCol</span><span class="o">=</span><span class="s2">"prediction"</span><span class="p">,</span> <span class="n">metricName</span><span class="o">=</span><span class="s2">"f1"</span><span class="p">)</span>
+
+<span class="n">auc_simple</span> <span class="o">=</span> <span class="n">evaluador_auc</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">predicciones_log_simple</span><span class="p">)</span>
+<span class="n">f1_simple</span> <span class="o">=</span> <span class="n">evaluador_f1</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">predicciones_log_simple</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Config A (solo dia del anio) -&gt; AUC: </span><span class="si">{</span><span class="n">auc_simple</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, F1: </span><span class="si">{</span><span class="n">f1_simple</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Config A (solo dia del anio) -&gt; AUC: 0.8305, F1: 0.7678
+</code></pre>
+<h2 id="118-entrenar-y-evaluar-config-b-estacionalidad-contexto-meteorologico">1.18 Entrenar y evaluar Config B (estacionalidad + contexto meteorológico)<a class="headerlink" href="#118-entrenar-y-evaluar-config-b-estacionalidad-contexto-meteorologico" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">log_enriquecido</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">featuresCol</span><span class="o">=</span><span class="s2">"features_enriquecido"</span><span class="p">,</span> <span class="n">labelCol</span><span class="o">=</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">)</span>
+<span class="n">modelo_log_enriquecido</span> <span class="o">=</span> <span class="n">log_enriquecido</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span>
+
+<span class="n">predicciones_log_enriquecido</span> <span class="o">=</span> <span class="n">modelo_log_enriquecido</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_test</span><span class="p">)</span>
+
+<span class="n">auc_enriquecido</span> <span class="o">=</span> <span class="n">evaluador_auc</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">predicciones_log_enriquecido</span><span class="p">)</span>
+<span class="n">f1_enriquecido</span> <span class="o">=</span> <span class="n">evaluador_f1</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">predicciones_log_enriquecido</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Config B (dia + humedad + nubosidad + presion) -&gt; AUC: </span><span class="si">{</span><span class="n">auc_enriquecido</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, F1: </span><span class="si">{</span><span class="n">f1_enriquecido</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Config B (dia + humedad + nubosidad + presion) -&gt; AUC: 0.9425, F1: 0.8737
+</code></pre>
+<h2 id="1181-metricas-adicionales-precision-y-exhaustividad">1.18.1 Métricas adicionales: precisión y exhaustividad<a class="headerlink" href="#1181-metricas-adicionales-precision-y-exhaustividad" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">log_enriquecido</span> <span class="o">=</span> <span class="n">LogisticRegression</span><span class="p">(</span><span class="n">featuresCol</span><span class="o">=</span><span class="s2">"features_enriquecido"</span><span class="p">,</span> <span class="n">labelCol</span><span class="o">=</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">)</span>
+<span class="n">modelo_log_enriquecido</span> <span class="o">=</span> <span class="n">log_enriquecido</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">df_train</span><span class="p">)</span>
+
+<span class="n">predicciones_log_enriquecido</span> <span class="o">=</span> <span class="n">modelo_log_enriquecido</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">df_test</span><span class="p">)</span>
+
+<span class="n">auc_enriquecido</span> <span class="o">=</span> <span class="n">evaluador_auc</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">predicciones_log_enriquecido</span><span class="p">)</span>
+<span class="n">f1_enriquecido</span> <span class="o">=</span> <span class="n">evaluador_f1</span><span class="o">.</span><span class="n">evaluate</span><span class="p">(</span><span class="n">predicciones_log_enriquecido</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Config B (dia + humedad + nubosidad + presion) -&gt; AUC: </span><span class="si">{</span><span class="n">auc_enriquecido</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, F1: </span><span class="si">{</span><span class="n">f1_enriquecido</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Config B (dia + humedad + nubosidad + presion) -&gt; AUC: 0.9411, F1: 0.8680
+</code></pre>
+<h2 id="119-matriz-de-confusion-config-b">1.19 Matriz de confusión - Config B<a class="headerlink" href="#119-matriz-de-confusion-config-b" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">conf_matrix</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">predicciones_log_enriquecido</span>
+    <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="s2">"prediction"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">tabla</span> <span class="o">=</span> <span class="n">conf_matrix</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">"prediction"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">"count"</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">tabla</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"Purples"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Cantidad de casos"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">"Predijo: No lluvia intensa"</span><span class="p">,</span> <span class="s2">"Predijo: Lluvia intensa"</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">"Real: No lluvia intensa"</span><span class="p">,</span> <span class="s2">"Real: Lluvia intensa"</span><span class="p">])</span>
+
+<span class="n">maximo</span> <span class="o">=</span> <span class="n">tabla</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tabla</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tabla</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">valor</span> <span class="o">=</span> <span class="n">tabla</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+        <span class="n">color_texto</span> <span class="o">=</span> <span class="s2">"white"</span> <span class="k">if</span> <span class="n">valor</span> <span class="o">&gt;</span> <span class="n">maximo</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="s2">"black"</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">valor</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color_texto</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Matriz de confusion - Config B"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_44_1.png" /></p>
+<h2 id="120-matriz-de-confusion-config-a">1.20 Matriz de confusión - Config A<a class="headerlink" href="#120-matriz-de-confusion-config-a" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">conf_matrix_a</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">predicciones_log_simple</span>
+    <span class="o">.</span><span class="n">groupBy</span><span class="p">(</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="s2">"prediction"</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">count</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">toPandas</span><span class="p">()</span>
+<span class="p">)</span>
+
+<span class="n">tabla_a</span> <span class="o">=</span> <span class="n">conf_matrix_a</span><span class="o">.</span><span class="n">pivot</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">"hay_lluvia_intensa"</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">"prediction"</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">"count"</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">tabla_a</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">"Oranges"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">label</span><span class="o">=</span><span class="s2">"Cantidad de casos"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">"Predijo: No lluvia intensa"</span><span class="p">,</span> <span class="s2">"Predijo: Lluvia intensa"</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">yticks</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s2">"Real: No lluvia intensa"</span><span class="p">,</span> <span class="s2">"Real: Lluvia intensa"</span><span class="p">])</span>
+
+<span class="n">maximo</span> <span class="o">=</span> <span class="n">tabla_a</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tabla_a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">tabla_a</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">]):</span>
+        <span class="n">valor</span> <span class="o">=</span> <span class="n">tabla_a</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">]</span>
+        <span class="n">color_texto</span> <span class="o">=</span> <span class="s2">"white"</span> <span class="k">if</span> <span class="n">valor</span> <span class="o">&gt;</span> <span class="n">maximo</span> <span class="o">*</span> <span class="mf">0.5</span> <span class="k">else</span> <span class="s2">"black"</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="nb">int</span><span class="p">(</span><span class="n">valor</span><span class="p">),</span> <span class="n">ha</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s2">"center"</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">color_texto</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">"Matriz de confusion - Config A"</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<p><img alt="png" src="../output_46_0.png" /></p>
+<h2 id="121-guardar-el-modelo-ganador">1.21 Guardar el modelo ganador<a class="headerlink" href="#121-guardar-el-modelo-ganador" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="n">RUTA_MODELO</span> <span class="o">=</span> <span class="s2">"artifacts/modelo_precipitacion_config_b"</span>
+
+<span class="n">modelo_log_enriquecido</span><span class="o">.</span><span class="n">write</span><span class="p">()</span><span class="o">.</span><span class="n">overwrite</span><span class="p">()</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="n">RUTA_MODELO</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Modelo guardado en: </span><span class="si">{</span><span class="n">RUTA_MODELO</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+</code></pre></div>
+<pre><code>Modelo guardado en: artifacts/modelo_precipitacion_config_b
+</code></pre>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "toc.integrate", "content.code.copy", "content.tabs.link"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
