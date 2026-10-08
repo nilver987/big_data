@@ -1,0 +1,95 @@
+:root {
+  --md-primary-fg-color: #17324A;
+  --md-primary-fg-color--light: #1F6FB2;
+  --md-primary-fg-color--dark: #0E1F30;
+  --md-accent-fg-color: #0E8C82;
+}
+
+.md-header {
+  background-color: #17324A;
+}
+
+.md-tabs {
+  background-color: #123147;
+}
+
+/* Tarjetas de dimensión */
+.dim-card {
+  border: 1px solid #e2e2e2;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1.5rem 0 2rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.dim-card-header {
+  padding: 0.6rem 1rem;
+  color: #fff;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.dim-card-header .integrante {
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.9;
+}
+.dim-card.amber .dim-card-header { background-color: #C97A1A; }
+.dim-card.blue .dim-card-header { background-color: #1F6FB2; }
+
+.dim-question {
+  background-color: #E3F3F1;
+  border-left: 4px solid #0E8C82;
+  padding: 0.9rem 1.1rem;
+  font-style: italic;
+  color: #17324A;
+  margin: 0;
+}
+.dim-card.amber .dim-question { border-left-color: #C97A1A; }
+.dim-card.blue .dim-question { border-left-color: #1F6FB2; }
+
+.dim-body {
+  padding: 0.2rem 1.1rem 1.1rem 1.1rem;
+}
+
+/* Pastillas */
+.pill {
+  display: inline-block;
+  color: #fff;
+  background-color: #17324A;
+  padding: 0.15rem 0.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+/* Tarjetas scope sí/no */
+.scope-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0 2rem 0;
+}
+@media (max-width: 600px) {
+  .scope-grid { grid-template-columns: 1fr; }
+}
+.scope-card {
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+}
+.scope-card.yes { background-color: #EAF6EE; }
+.scope-card.no { background-color: #FAEAEA; }
+.scope-card h3 { margin-top: 0; }
+.scope-card.yes h3 { color: #1E7A46; }
+.scope-card.no h3 { color: #9C2B2B; }
+
+/* Ficha portada */
+.cover-table td:first-child {
+  font-weight: 700;
+  color: #0E8C82;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-right: 1rem;
+}
